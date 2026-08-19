@@ -14,7 +14,7 @@ pipeline {
 
         stage('Pipeline') {
             steps {
-                dir('ReactCrach') {
+                dir('ReactCrash') {
                     sh 'npm ci'
                     sh 'npm run lint || true'
                     sh 'npm run build'
