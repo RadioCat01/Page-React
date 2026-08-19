@@ -12,33 +12,12 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
+        stage('Pipeline') {
             steps {
                 dir('ReactCrach') {
                     sh 'npm ci'
-                }
-            }
-        }
-
-        stage('Lint') {
-            steps {
-                dir('ReactCrach') {
                     sh 'npm run lint || true'
-                }
-            }
-        }
-
-        stage('Build') {
-            steps {
-                dir('ReactCrach') {
                     sh 'npm run build'
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                dir('ReactCrach') {
                     sh '''
                         sudo rm -rf /var/www/html/*
                         sudo cp -r dist/* /var/www/html/
@@ -49,14 +28,7 @@ pipeline {
     }
 
     post {
-        success {
-            echo 'Build and deploy succeeded.'
-        }
-        failure {
-            echo 'Build failed — check console output above for the failing stage.'
-        }
-        always {
-            echo "Pipeline finished with status: ${currentBuild.currentResult}"
-        }
+        success { echo 'Build and deploy succeeded.' }
+        failure { echo 'Build failed — check console output above.' }
     }
 }
