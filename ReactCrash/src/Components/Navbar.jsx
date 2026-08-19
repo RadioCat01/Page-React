@@ -1,30 +1,106 @@
-import { NavLink } from 'react-router-dom';
-import logo from '../assets/gymshark.png';
-const Navbar = () => {
+import { useState, useEffect } from 'react';
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
-  const linkClass = ({isActive})=> isActive ? 'flex justify-center items-center bg-gray-700 text-white box-border h-10 w-24 hover:bg-gray-700 hover:text-white rounded-full px-4 py-2' : 'flex justify-center items-center text-gray-700 hover:bg-gray-700 hover:text-white rounded-full box-border h-10 w-24 px-3 py-2';
+const navLinks = [
+  { label: 'Home', href: '#home' },
+  { label: 'Services', href: '#services' },
+  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Contact', href: '#contact' },
+];
+
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const handleClick = () => setMobileOpen(false);
 
   return (
-    <>
-  <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-500 z-50">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex h-24 items-center justify-between">
-        <div className="flex items-center">
-          <a className="flex items-center mr-4" href="/index.html">
-            <img className="h-10 w-auto ml-8" src={logo} alt="React Jobs" />
-            <span className="hidden md:block text-gray-800 text-2xl font-bold ml-4">GYM SHARK</span>
-          </a>
-        </div>
-        <div className="flex items-center space-x-2 mr-8 flex-wrap">
-          <NavLink to="/" className={linkClass}>Home</NavLink>
-          <NavLink to="/jobs" className={linkClass}>WOMEN</NavLink>
-          <NavLink to="/Addjob" className={linkClass}>MEN</NavLink>
+    <nav
+      id="navbar"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'bg-navy-900/80 backdrop-blur-xl border-b border-glass-border shadow-lg shadow-navy-900/50'
+          : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#home" className="flex items-center gap-2 group">
+          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-violet flex items-center justify-center text-white font-display font-bold text-lg group-hover:shadow-lg group-hover:shadow-accent-indigo/40 transition-shadow">
+            W
+          </div>
+          <span className="font-display font-bold text-xl text-white tracking-tight">
+            Web<span className="gradient-text">Craft</span>
+          </span>
+        </a>
+
+        {/* Desktop links */}
+        <ul className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-indigo to-accent-cyan group-hover:w-full transition-all duration-300" />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTA */}
+        <a href="#contact" className="hidden md:inline-block btn-primary text-sm py-2.5 px-6">
+          <span>Get a Quote</span>
+        </a>
+
+        {/* Mobile toggle */}
+        <button
+          id="mobile-menu-toggle"
+          className="md:hidden text-white text-2xl"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <HiX /> : <HiMenuAlt3 />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-400 ${
+          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-6 pb-6 pt-2 bg-navy-800/95 backdrop-blur-xl border-t border-glass-border">
+          <ul className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={handleClick}
+                  className="block text-slate-300 hover:text-white font-medium transition-colors py-1"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="#contact" onClick={handleClick} className="btn-primary inline-block text-center text-sm py-2.5 px-6 mt-2">
+                <span>Get a Quote</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </nav>
-</>
-  )
-}
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
