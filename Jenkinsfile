@@ -14,28 +14,36 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm ci'
+                dir('ReactCrach') {
+                    sh 'npm ci'
+                }
             }
         }
 
         stage('Lint') {
             steps {
-                sh 'npm run lint || true'
+                dir('ReactCrach') {
+                    sh 'npm run lint || true'
+                }
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                dir('ReactCrach') {
+                    sh 'npm run build'
+                }
             }
         }
 
         stage('Deploy') {
             steps {
-                sh '''
-                    sudo rm -rf /var/www/html/*
-                    sudo cp -r dist/* /var/www/html/
-                '''
+                dir('ReactCrach') {
+                    sh '''
+                        sudo rm -rf /var/www/html/*
+                        sudo cp -r dist/* /var/www/html/
+                    '''
+                }
             }
         }
     }
