@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="text-center">
           <h1
             className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl"
-          > 70 % Offers in this month
+          > 100 % Offers in this month
           </h1>
           <p className="my-4 text-xl text-white">
             Shop Now ! !
