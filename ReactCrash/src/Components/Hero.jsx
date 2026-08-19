@@ -62,8 +62,8 @@ const Hero = () => {
           {[
             { value: '50+', label: 'Projects Delivered' },
             { value: '98%', label: 'Client Satisfaction' },
-            { value: '3 Day', label: 'Avg. Turnaround' },
-            { value: '$299', label: 'Starting Price' },
+            { value: '5 Day', label: 'Avg. Turnaround' },
+            { value: '20,000 LKR', label: 'Starting Price' },
           ].map((stat) => (
             <div key={stat.label} className="glass-card p-4 hover:bg-glass-white">
               <p className="font-display text-2xl sm:text-3xl font-bold gradient-text">{stat.value}</p>

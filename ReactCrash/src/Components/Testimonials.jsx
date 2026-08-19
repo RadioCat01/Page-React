@@ -3,27 +3,24 @@ import useReveal from '../hooks/useReveal';
 
 const testimonials = [
   {
-    name: 'Sarah Mitchell',
-    role: 'Founder, Bloom & Brew',
+    name: 'Kumara Wakkumbura',
     text: "WebCraft delivered our café website in just 4 days. It's fast, beautiful, and cost us less than a month's rent. Couldn't be happier!",
     rating: 5,
-    initials: 'SM',
+    initials: 'KW',
     color: 'from-amber-500 to-orange-500',
   },
   {
-    name: 'James Rodriguez',
-    role: 'CEO, NovaTech Solutions',
-    text: "We were quoted $5,000+ by other agencies. WebCraft gave us an even better result for a fraction of the price. The ROI has been incredible.",
+    name: 'Amal Hettiarachchi',
+    text: "WebCraft gave us an even better result for a fraction of the price. Highly Recomended!",
     rating: 5,
-    initials: 'JR',
+    initials: 'AH',
     color: 'from-accent-indigo to-accent-violet',
   },
   {
-    name: 'Emily Chang',
-    role: 'Owner, Verde Organics',
+    name: 'Sumith Udayanga',
     text: "Our online store loads instantly and looks premium. Sales increased 40% within the first month. The team was responsive and professional throughout.",
     rating: 5,
-    initials: 'EC',
+    initials: 'SU',
     color: 'from-emerald-500 to-teal-500',
   },
 ];

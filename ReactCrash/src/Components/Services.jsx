@@ -16,14 +16,14 @@ const services = [
   },
   {
     icon: HiOutlineShoppingCart,
-    title: 'E-Commerce',
-    description: 'Lightweight online stores with smooth checkout flows, product catalogs, and inventory management.',
+    title: 'Portfolio Websites',
+    description: 'Showcase your work with stunning, modern portfolios that make a lasting impression.',
     color: 'from-accent-cyan to-accent-indigo',
   },
   {
     icon: HiOutlineCog,
     title: 'Maintenance & Support',
-    description: 'Ongoing updates, performance monitoring, and technical support to keep your site running flawlessly.',
+    description: 'Keep your website updated and running smoothly with our reliable maintenance and support services.',
     color: 'from-accent-pink to-accent-cyan',
   },
 ];
@@ -44,7 +44,7 @@ const Services = () => {
             Services Built for <span className="gradient-text">Growth</span>
           </h2>
           <p className="section-subtitle">
-            From single landing pages to full business websites — we deliver modern, lightweight solutions at a fraction of the industry cost.
+            From single landing pages to full business websites, we deliver modern, lightweight solutions at a fraction of the industry cost.
           </p>
         </div>
 
