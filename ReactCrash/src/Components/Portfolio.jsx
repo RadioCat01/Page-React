@@ -57,7 +57,7 @@ const Portfolio = () => {
         {/* Header */}
         <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <p className="text-accent-violet font-semibold text-sm uppercase tracking-widest mb-3">Our Work</p>
-          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4">
             Projects We're <span className="gradient-text">Proud Of</span>
           </h2>
           <p className="section-subtitle">
@@ -87,8 +87,8 @@ const Portfolio = () => {
               {/* Info */}
               <div className="p-5">
                 <span className={`text-xs font-semibold uppercase tracking-wider ${p.accent}`}>{p.category}</span>
-                <h3 className="font-display text-lg font-semibold text-white mt-1 mb-2">{p.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{p.description}</p>
+                <h3 className="font-display text-lg font-semibold text-slate-800 mt-1 mb-2">{p.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{p.description}</p>
               </div>
             </div>
           ))}

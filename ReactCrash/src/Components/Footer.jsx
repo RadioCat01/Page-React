@@ -28,11 +28,11 @@ const Footer = () => {
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-accent-indigo to-accent-violet flex items-center justify-center text-white font-display font-bold text-lg">
                 W
               </div>
-              <span className="font-display font-bold text-xl text-white tracking-tight">
+              <span className="font-display font-bold text-xl text-slate-800 tracking-tight">
                 Web<span className="gradient-text">Craft</span>
               </span>
             </a>
-            <p className="text-sm text-slate-400 leading-relaxed max-w-xs mb-6">
+            <p className="text-sm text-slate-600 leading-relaxed max-w-xs mb-6">
               Building lightweight, stunning websites at prices that make sense for startups and small businesses.
             </p>
             {/* Socials */}
@@ -42,7 +42,7 @@ const Footer = () => {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-lg border border-glass-border flex items-center justify-center text-slate-400 hover:text-white hover:border-accent-indigo hover:bg-accent-indigo/10 transition-all duration-300"
+                  className="w-9 h-9 rounded-lg border border-glass-border flex items-center justify-center text-slate-600 hover:text-slate-900 hover:border-accent-indigo hover:bg-accent-indigo/10 transition-all duration-300"
                 >
                   <s.icon className="text-sm" />
                 </a>
@@ -53,11 +53,11 @@ const Footer = () => {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="font-display font-semibold text-white text-sm mb-4">{title}</h4>
+              <h4 className="font-display font-semibold text-slate-800 text-sm mb-4">{title}</h4>
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <a href="#" className="text-sm text-slate-600 hover:text-slate-950 transition-colors">
                       {link}
                     </a>
                   </li>

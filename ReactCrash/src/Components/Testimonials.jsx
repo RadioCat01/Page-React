@@ -35,8 +35,8 @@ const Testimonials = () => {
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className={`text-center mb-16 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-          <p className="text-accent-cyan font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</p>
-          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+          <p className="text-orange-600 font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</p>
+          <h2 className="section-title text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4">
             What Our Clients <span className="gradient-text">Say</span>
           </h2>
           <p className="section-subtitle">
@@ -60,7 +60,7 @@ const Testimonials = () => {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-300 text-sm leading-relaxed flex-1 mb-6">"{t.text}"</p>
+              <p className="text-slate-600 text-sm leading-relaxed flex-1 mb-6">"{t.text}"</p>
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-glass-border">
@@ -68,7 +68,7 @@ const Testimonials = () => {
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{t.name}</p>
+                  <p className="text-slate-800 font-semibold text-sm">{t.name}</p>
                   <p className="text-slate-500 text-xs">{t.role}</p>
                 </div>
               </div>

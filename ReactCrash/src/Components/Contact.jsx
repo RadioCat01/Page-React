@@ -21,13 +21,13 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-24 sm:py-32 overflow-hidden">
       {/* Background Gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-800/40 to-navy-900" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
       <div className="bg-mesh-1 top-0 left-0" />
       <div className="bg-mesh-3 bottom-0 right-0" />
 
       {/* Decorative Floating Mesh Orbs */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-accent-indigo/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-accent-violet/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-orange-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-orange-600/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" />
 
       <div ref={ref} className="relative z-10 max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -38,23 +38,23 @@ const Contact = () => {
               <p className="text-accent-indigo font-bold text-xs uppercase tracking-widest mb-3">
                 Get In Touch
               </p>
-              <h2 className="section-title text-4xl sm:text-5xl lg:text-6xl text-white mb-4 leading-[1.1] font-extrabold tracking-tight">
+              <h2 className="section-title text-4xl sm:text-5xl lg:text-6xl text-slate-900 mb-4 leading-[1.1] font-extrabold tracking-tight">
                 Let's Build <br />
                 Something <span className="gradient-text font-display">Amazing</span>
               </h2>
             </div>
 
-            <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-md">
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-md">
               Have an idea, project, or question? Reach out to us directly through phone or email. We are active and ready to collaborate.
             </p>
 
             {/* Glowing Status Badge */}
-            <div className="flex items-center gap-3 bg-navy-800/50 border border-glass-border rounded-2xl p-4 w-fit shadow-xl backdrop-blur-md">
+            <div className="flex items-center gap-3 bg-slate-50/50 border border-glass-border rounded-2xl p-4 w-fit shadow-xl backdrop-blur-md">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
-              <span className="text-xs font-semibold text-slate-300 tracking-wide">
+              <span className="text-xs font-semibold text-slate-700 tracking-wide">
                 Available & Responding Promptly
               </span>
             </div>
@@ -66,23 +66,23 @@ const Contact = () => {
             {/* Email Panel */}
             <div className="relative group">
               {/* Outer Glow Outline */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-accent-indigo via-accent-violet to-accent-cyan rounded-2xl opacity-10 group-hover:opacity-45 blur transition-all duration-500" />
+              <div className="absolute -inset-[1px] bg-gradient-to-r from-orange-500 via-orange-600 to-amber-400 rounded-2xl opacity-10 group-hover:opacity-45 blur transition-all duration-500" />
 
               <div className="relative glass-card p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 overflow-hidden">
                 {/* Embedded internal subtle orb */}
-                <div className="absolute -right-16 -top-16 w-32 h-32 bg-accent-indigo/5 rounded-full blur-2xl group-hover:bg-accent-indigo/10 transition-colors duration-500" />
+                <div className="absolute -right-16 -top-16 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/10 transition-colors duration-500" />
 
                 <div className="flex items-center gap-5 relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-navy-800/80 border border-glass-border flex items-center justify-center relative overflow-hidden group-hover:scale-110 group-hover:border-accent-indigo/40 transition-all duration-300 shadow-md">
-                    <HiOutlineMail className="text-2xl text-accent-indigo group-hover:text-accent-cyan transition-colors duration-300" />
+                  <div className="w-14 h-14 rounded-xl bg-slate-50/80 border border-glass-border flex items-center justify-center relative overflow-hidden group-hover:scale-110 group-hover:border-orange-500/40 transition-all duration-300 shadow-md">
+                    <HiOutlineMail className="text-2xl text-orange-600 group-hover:text-amber-500 transition-colors duration-300" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-accent-indigo mb-1 block">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-orange-600 mb-1 block">
                       Send An Email
                     </span>
-                    <a
-                      href="mailto:hrsynapsemvas@gmail.com"
-                      className="text-base sm:text-lg font-bold text-white hover:text-accent-indigo transition-colors duration-200 font-display break-all"
+                    <a 
+                      href="mailto:hrsynapsemvas@gmail.com" 
+                      className="text-base sm:text-lg font-bold text-slate-800 hover:text-orange-500 transition-colors duration-200 font-display break-all"
                     >
                       hrsynapsemvas@gmail.com
                     </a>
@@ -90,23 +90,23 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-3 relative z-10 w-full sm:w-auto">
-                  <a
-                    href="mailto:hrsynapsemvas@gmail.com"
+                  <a 
+                    href="mailto:hrsynapsemvas@gmail.com" 
                     className="btn-primary py-3 px-5 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 font-bold tracking-wider uppercase whitespace-nowrap"
                   >
                     <span>Write Email</span>
                   </a>
-                  <button
+                  <button 
                     onClick={() => handleCopy('hrsynapsemvas@gmail.com', 'email')}
-                    className="btn-outline py-3 px-4 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 border-glass-border hover:border-accent-indigo text-slate-300 hover:text-white transition-all duration-300 rounded-xl"
+                    className="btn-outline py-3 px-4 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 border-glass-border hover:border-orange-500 text-slate-600 hover:text-slate-800 transition-all duration-300 rounded-xl"
                     aria-label="Copy email address"
                   >
                     {copiedEmail ? (
                       <>
-                        <svg className="w-4 h-4 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                        <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-accent-cyan font-bold">Copied!</span>
+                        <span className="text-amber-500 font-bold">Copied!</span>
                       </>
                     ) : (
                       <>
@@ -124,23 +124,23 @@ const Contact = () => {
             {/* Phone Panel */}
             <div className="relative group">
               {/* Outer Glow Outline */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-violet rounded-2xl opacity-10 group-hover:opacity-45 blur transition-all duration-500" />
+              <div className="absolute -inset-[1px] bg-gradient-to-r from-amber-400 via-orange-500 to-orange-600 rounded-2xl opacity-10 group-hover:opacity-45 blur transition-all duration-500" />
 
               <div className="relative glass-card p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 overflow-hidden">
                 {/* Embedded internal subtle orb */}
-                <div className="absolute -right-16 -top-16 w-32 h-32 bg-accent-violet/5 rounded-full blur-2xl group-hover:bg-accent-violet/10 transition-colors duration-500" />
+                <div className="absolute -right-16 -top-16 w-32 h-32 bg-orange-600/5 rounded-full blur-2xl group-hover:bg-orange-600/10 transition-colors duration-500" />
 
                 <div className="flex items-center gap-5 relative z-10">
-                  <div className="w-14 h-14 rounded-xl bg-navy-800/80 border border-glass-border flex items-center justify-center relative overflow-hidden group-hover:scale-110 group-hover:border-accent-cyan/40 transition-all duration-300 shadow-md">
-                    <HiOutlinePhone className="text-2xl text-accent-cyan group-hover:text-accent-indigo transition-colors duration-300" />
+                  <div className="w-14 h-14 rounded-xl bg-slate-50/80 border border-glass-border flex items-center justify-center relative overflow-hidden group-hover:scale-110 group-hover:border-amber-400/40 transition-all duration-300 shadow-md">
+                    <HiOutlinePhone className="text-2xl text-amber-500 group-hover:text-orange-600 transition-colors duration-300" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-accent-cyan mb-1 block">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-1 block">
                       Call Support
                     </span>
-                    <a
-                      href="tel:0764631698"
-                      className="text-base sm:text-lg font-bold text-white hover:text-accent-cyan transition-colors duration-200 font-display"
+                    <a 
+                      href="tel:0764631698" 
+                      className="text-base sm:text-lg font-bold text-slate-800 hover:text-amber-500 transition-colors duration-200 font-display"
                     >
                       0764631698
                     </a>
@@ -148,23 +148,23 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-center gap-3 relative z-10 w-full sm:w-auto">
-                  <a
-                    href="tel:0764631698"
+                  <a 
+                    href="tel:0764631698" 
                     className="btn-primary py-3 px-5 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 font-bold tracking-wider uppercase whitespace-nowrap"
                   >
                     <span>Call Now</span>
                   </a>
-                  <button
+                  <button 
                     onClick={() => handleCopy('0764631698', 'phone')}
-                    className="btn-outline py-3 px-4 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 border-glass-border hover:border-accent-cyan/50 text-slate-300 hover:text-white transition-all duration-300 rounded-xl"
+                    className="btn-outline py-3 px-4 text-xs flex-1 sm:flex-none flex items-center justify-center gap-2 border-glass-border hover:border-amber-500/50 text-slate-600 hover:text-slate-800 transition-all duration-300 rounded-xl"
                     aria-label="Copy phone number"
                   >
                     {copiedPhone ? (
                       <>
-                        <svg className="w-4 h-4 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                        <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-accent-cyan font-bold">Copied!</span>
+                        <span className="text-amber-500 font-bold">Copied!</span>
                       </>
                     ) : (
                       <>

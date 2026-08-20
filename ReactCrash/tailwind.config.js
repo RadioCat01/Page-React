@@ -12,20 +12,20 @@ export default {
       },
       colors: {
         navy: {
-          900: '#0a0e1a',
-          800: '#0f1629',
-          700: '#151d38',
-          600: '#1c2647',
+          900: '#ffffff',
+          800: '#f8fafc',
+          700: '#f1f5f9',
+          600: '#e2e8f0',
         },
         accent: {
-          indigo: '#6366f1',
-          violet: '#8b5cf6',
-          cyan: '#06b6d4',
-          pink: '#ec4899',
+          indigo: '#f97316',
+          violet: '#ea580c',
+          cyan: '#facc15',
+          pink: '#ea580c',
         },
         glass: {
-          white: 'rgba(255, 255, 255, 0.05)',
-          border: 'rgba(255, 255, 255, 0.1)',
+          white: 'rgba(255, 255, 255, 0.8)',
+          border: 'rgba(15, 23, 42, 0.08)',
         }
       },
       animation: {
