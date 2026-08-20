@@ -82,7 +82,7 @@ const Contact = () => {
                     </span>
                     <a
                       href="mailto:hrsynapsemvas@gmail.com"
-                      className="text-base sm:text-sm font-bold text-white hover:text-accent-indigo transition-colors duration-200 font-display break-all"
+                      className="text-base sm:text-lg font-bold text-white hover:text-accent-indigo transition-colors duration-200 font-display break-all"
                     >
                       hrsynapsemvas@gmail.com
                     </a>
